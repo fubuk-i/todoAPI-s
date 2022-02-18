@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "a9c98b09-ec40-4771-9042-35bc6e96b75e",
+		"name": "todoApi's",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "add todo task",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstTask\" : \"brush teeth\",\n    \"secondTask\": \"drink coffee\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/todo/addTodoTask",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"todo",
+						"addTodoTask"
+					]
+				},
+				"description": "POST api to add todo task's"
+			},
+			"response": []
+		},
+		{
+			"name": "get all todo list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/todo/getAllTodos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"todo",
+						"getAllTodos"
+					]
+				},
+				"description": "GET api to recive list of all todo's includes pagination"
+			},
+			"response": []
+		},
+		{
+			"name": "update todo status",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"todoId\": \"620f5e64fc383904c38f3fb8\",\n    \"status\": \"COMPLETED\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/todo/todoCompleted",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"todo",
+						"todoCompleted"
+					]
+				},
+				"description": "PUT api to mark todo as completed"
+			},
+			"response": []
+		}
+	]
+}
